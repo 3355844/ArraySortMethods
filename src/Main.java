@@ -6,14 +6,20 @@ public class Main {
 
         ArraySorter sorter = new ArraySorter();
         int[] workArray;
+        int[] sortedArrayLogic;
+        int[] insertionsSortArray;
+
 
         workArray = sorter.fillerArr(10, 50);
-        workArray = sorter.sortArrayLogic(workArray);
-
-
+        sortedArrayLogic = sorter.sortArrayLogic(workArray.clone());
+        insertionsSortArray = sorter.insertionSort(workArray.clone());
 //        System.out.println(sorter.sortArrayLogic
 //                (sorter.fillerArr(50, 50)));
-        System.out.println(Arrays.toString(workArray));
 
+        sorter.printArr(workArray);
+        System.out.println();
+        sorter.printArr(sortedArrayLogic);
+        System.out.println();
+        sorter.printArr(insertionsSortArray);
     }
 }
